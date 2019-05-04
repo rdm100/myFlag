@@ -7,6 +7,8 @@ Once cloned or downloaded, use npm install command in the terminal at root level
 My Flag App
 My Flag are looking to improve their website with an interactive react app that simulates and showcases their LED flag device.
 
+https://myflag.store/
+
 MVP:
 • Implement in React a display resembling the My Flag device
 • Implement display of a single flag onto the device
