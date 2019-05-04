@@ -8,7 +8,7 @@ My Flag App
 My Flag are looking to improve their website with an interactive react app that simulates and showcases their LED flag device.
 
 MVP:
-• Implement in React a display resembling the myFlag device
+• Implement in React a display resembling the My Flag device
 • Implement display of a single flag onto the device
 • Implement functionality of device buttons (changes flag)
 
