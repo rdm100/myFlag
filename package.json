@@ -1,0 +1,22 @@
+{
+  "name": "myFlag_project",
+  "version": "1.0.0",
+  "description": "A full stack react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs/element_spec.js",
+    "start": "node server.js",
+    "seeds": "mongo < seeds.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "mocha": "^5.2.0"
+  }
+}
