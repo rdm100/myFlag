@@ -21,7 +21,7 @@ componentDidMount(){
   render(){
     return (
       <div>
-        <Device elements={this.state.flagToDisplay}/>
+        <Device flag={this.state.flagToDisplay}/>
       </div>
     )
   }

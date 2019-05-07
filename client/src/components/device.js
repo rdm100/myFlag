@@ -5,7 +5,7 @@ class Device extends React.Component{
   render(){
     return (
       <div className="">
-        <p>{this.props.flagToDisplay}</p>
+        <p>{this.props.flag}</p>
       </div>
     )
   }
