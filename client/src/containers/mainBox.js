@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Device from "../components/device"
 
 class MainBox extends Component{
 
@@ -10,10 +11,17 @@ class MainBox extends Component{
     }
   }
 
+componentDidMount(){
+  const url = '/api/flags';
+  fetch(url).then(res => res.json()).then(flags =>
+    this.setState({flags: flags,
+    flagToDisplay: flags[0].leds[0]}));
+}
+
   render(){
     return (
       <div>
-        <p>hello world</p>
+        <Device elements={this.state.flagToDisplay}/>
       </div>
     )
   }

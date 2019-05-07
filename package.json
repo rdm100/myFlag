@@ -4,7 +4,7 @@
   "description": "A full stack react app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha specs/element_spec.js",
+    "test": "mocha specs/flag_spec.js",
     "start": "node server.js",
     "seeds": "mongo < seeds.js"
   },
