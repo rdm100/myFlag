@@ -5,7 +5,7 @@ db.flags.remove({});
 db.flags.insert([
 
 {
-leds: [red]
+"leds": ["red"]
 }
 
 ]
