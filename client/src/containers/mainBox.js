@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Device from "../components/device"
 
-class MainBox extends Component{
+class MainBox extends React.Component{
 
   constructor(props){
     super(props);
-    this.state =  {
+    this.state = {
       flags:[],
       flagToDisplay: {}
     }
@@ -13,15 +13,21 @@ class MainBox extends Component{
 
 componentDidMount(){
   const url = '/api/flags';
-  fetch(url).then(res => res.json()).then(flags =>
-    this.setState({flags: flags,
-    flagToDisplay: flags[0].leds[0]}));
+  fetch(url).then(res => res.json()).then(flags => {
+    this.setState({
+       flags: flags
+     })
+   });
 }
 
   render(){
+    const elements = [];
+    this.state.flags.forEach((flag) => {
+      elements.push(<Device id={flag.id} key={flag.id}/>)
+    })
     return (
       <div>
-        <Device flag={this.state.flagToDisplay}/>
+        {elements}
       </div>
     )
   }
