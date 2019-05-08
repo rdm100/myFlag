@@ -23,7 +23,7 @@ componentDidMount(){
   render(){
     const elements = [];
     this.state.flags.forEach((flag) => {
-      elements.push(<Device id={flag.id} key={flag.id}/>)
+      elements.push(<Device name={flag.name} key={flag.id}/>)
     })
     return (
       <div>

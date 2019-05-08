@@ -4,10 +4,10 @@ import './device.css';
 class Device extends React.Component{
 
   render(){
-    console.log(this.props.id)
+
     return (
       <div>
-        <p>{this.props.id}</p>
+        <p>{this.props.name}</p>
       </div>
     )
   }

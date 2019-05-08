@@ -6,7 +6,7 @@ db.flags.insert([
 
 {
   "id": 1,
-  "name": "Scotland"
+  "name": "Scotland",
   "flagLEDs":[
     {"position": [0, 1], "status": "off"},
     {"position": [0, 2], "status": "off"}
@@ -14,7 +14,7 @@ db.flags.insert([
 },
 {
   "id": 2,
-  "name": "Italy"
+  "name": "Italy",
   "flagLEDs":[
     {"position": [0, 1], "status": "off"},
     {"position": [0, 2], "status": "off"}
