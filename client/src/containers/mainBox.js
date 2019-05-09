@@ -9,6 +9,8 @@ class MainBox extends React.Component{
       flags:[],
       flagToDisplay: {}
     }
+    console.log(this.props);
+
   }
 
 componentDidMount(){
@@ -22,14 +24,24 @@ componentDidMount(){
 
   render(){
     const elements = [];
+
+    //options for dropdown contains flag names right now, can later change to celtic etc
+    const options = this.state.flags.map((flag, index) => {
+      return <option key={index} value={flag}> Flag: {flag.name} </option>});
+
     this.state.flags.forEach((flag) => {
-      elements.push(<Device name={flag.name} id={flag.id} colour={flag.flagLEDs[0].colour}/>)
+      elements.push(<Device name={flag.name} key={flag.id} id={flag.id} colour={flag.flagLEDs[0].colour}/>)
+
     })
     return (
-      <div>
-        {elements}
+      <div className="MainBox">
+      <select name="flagsDropDown">
+      {options}
+      </select>
+      <Device/>
       </div>
     )
+
   }
 
 }
