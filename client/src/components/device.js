@@ -12,7 +12,7 @@ class Device extends React.Component{
     if(!this.props.flags && !this.props.id ){
       return null;
     }
-
+      //map over the flags array and then map over each
     const led_el = this.props.flags.map((flag) => {
       return(
         <li key={flag.id} className="component-item" style={{backgroundColor: flag.colour}}>
