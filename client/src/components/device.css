@@ -23,7 +23,7 @@ li {
 
 
 ul.LEDs li {
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
   border: 1px solid #eaeaea;
   height: 12vw;
   max-height: 125px;

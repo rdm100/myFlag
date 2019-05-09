@@ -7,9 +7,22 @@ class Device extends React.Component{
 
 
   render(){
+    console.log(this);
+
+    if(!this.props.flags && !this.props.id ){
+      return null;
+    }
+
+    const led_el = this.props.flags.map((flag) => {
+      return(
+        <li key={flag.id} className="component-item" style={{backgroundColor: flag.colour}}>
+        </li>
+      )
+    })
 
     return (
       <div>
+
       <div>
       <p>{this.props.id}</p>
       <p>{this.props.name}</p>
@@ -19,37 +32,9 @@ class Device extends React.Component{
 
 
       <div className="LEDsGrid">
-      <ul class="LEDs">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
+      <ul className="LEDs">
+      {led_el}
       </ul>
-
       </div>
       </div>
 
@@ -57,5 +42,7 @@ class Device extends React.Component{
     )
   }
 }
+
+
 
 export default Device;

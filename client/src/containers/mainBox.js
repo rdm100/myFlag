@@ -9,7 +9,7 @@ class MainBox extends React.Component{
       flags:[],
       flagToDisplay: {}
     }
-    console.log(this.props);
+    console.log(this.state);
 
   }
 
@@ -30,8 +30,7 @@ componentDidMount(){
       return <option key={index} value={flag}> Flag: {flag.name} </option>});
 
     this.state.flags.forEach((flag) => {
-      elements.push(<Device name={flag.name} key={flag.id} id={flag.id} colour={flag.flagLEDs[0].colour}/>)
-
+      elements.push(<Device flags={this.state.flags} name={flag.name} key={flag.id} id={flag.id} colour={flag.flagLEDs[0].colour}/>)
     })
     return (
       <div className="MainBox">
@@ -39,6 +38,8 @@ componentDidMount(){
       {options}
       </select>
       <Device/>
+      {elements}
+
       </div>
     )
 
