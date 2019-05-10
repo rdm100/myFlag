@@ -46,9 +46,7 @@ componentDidMount(){
   const indexnew = index + 1;
   const selected = this.state.flags[indexnew];
   this.setState({selectedFlag: selected})
-  console.log("selectedflagafterchange",this.state.selectedFlag);
-
-
+  console.log("selectedflagafterchange", this.state.selectedFlag);
 }
 
 
