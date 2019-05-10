@@ -6,27 +6,42 @@ class Device extends React.Component{
 
 
 
-  render(){
-    console.log(this);
 
-    if(!this.props.flags && !this.props.id ){
+
+  render(){
+
+    if(!this.props.flag && !this.props.id ){
       return null;
     }
-      //map over the flags array and then map over each
-    const led_el = this.props.flags.map((flag) => {
+    if(!this.props.flag){
+      return null;
+    }
+
+    if(!this.props.flag.flagLEDs){
+      return null;
+    }
+
+    if(this.props.flag){
+
+  }
+
+  //map over the flags array and then map over each
+
+    const led_el = this.props.flag.flagLEDs.map((led) => {
       return(
-        <li key={flag.id} className="component-item" style={{backgroundColor: flag.colour}}>
+        <li key={led.position} className="component-item" style={{backgroundColor: led.colour}}>
         </li>
       )
     })
+
 
     return (
       <div>
 
       <div>
-      <p>{this.props.id}</p>
-      <p>{this.props.name}</p>
-      <p>{this.props.colour}</p>
+      <p>{this.props.flag.id}</p>
+      <p>{this.props.flag.name}</p>
+      <p>{this.props.flag.colour}</p>
       <button type="button"> change flag </button>
       </div>
 
