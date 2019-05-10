@@ -11,6 +11,7 @@ class MainBox extends React.Component{
       selectedFlag: {}
     }
     this.handleFlagSelect = this.handleFlagSelect.bind(this);
+    this.handleChangeFlagButton = this.handleChangeFlagButton.bind(this);
     console.log(this.state);
 
   }
@@ -22,25 +23,32 @@ componentDidMount(){
        flags: flags
      })
    });
-
-
 }
 
  handleFlagSelect(event){
+
 
   event.preventDefault()
   console.log(event.target.value);
   const index = event.target.value;
   const selected = this.state.flags[index];
   this.setState({selectedFlag: selected})
-  // const selected = this.state.flags[event.target.value];
-  // this.props.candidates.map((candidate) => {
-  //   if ((candidate.email === event.target.email.value) && (candidate.passWord === event.target.password.value)) {
-  //     props.handleCandidseleateLogin(candidate.id);
-  //     // props.loginById(candidate.id)
-  //   }
-  //   return <CandidateProfileContainer id={candidate.id}/>
-  // })
+  console.log(this.state);
+
+
+}
+
+ handleChangeFlagButton(event){
+
+  event.preventDefault()
+  console.log("selectedflag",this.state.selectedFlag);
+  const index = this.state.selectedFlag.id;
+  const indexnew = index + 1;
+  const selected = this.state.flags[indexnew];
+  this.setState({selectedFlag: selected})
+  console.log("selectedflagafterchange",this.state.selectedFlag);
+
+
 }
 
 
@@ -64,6 +72,8 @@ componentDidMount(){
       <select name="flagsDropDown" onChange={this.handleFlagSelect}>
       {options}
       </select>
+      <button type="button"> On/Off </button>
+      <button type="button" onClick={this.handleChangeFlagButton} > change flag </button>
       <Device flag={this.state.selectedFlag}/>
       {elements}
 

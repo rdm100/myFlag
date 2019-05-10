@@ -17,7 +17,6 @@ app.get("/api/flags", (req, res, next) => {
     if(err) next(err);
     res.json(flags);
   });
-
 });
 
 app.listen(port, ()=>{

@@ -42,7 +42,6 @@ class Device extends React.Component{
       <p>{this.props.flag.id}</p>
       <p>{this.props.flag.name}</p>
       <p>{this.props.flag.colour}</p>
-      <button type="button"> change flag </button>
       </div>
 
 
