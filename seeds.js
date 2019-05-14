@@ -4,6 +4,7 @@ db.flags.remove({});
 
 db.flags.insert([
 
+
 {
   "id": 1,
   "name": "Scotland",
@@ -361,6 +362,8 @@ db.flags.insert([
   ]
 }
 
+
+           
 
 ]
 )
