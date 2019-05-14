@@ -6,10 +6,12 @@ class MainBox extends React.Component{
   constructor(props){
     super(props);
     this.state = {
+      onoff: false,
       flags:[],
       flagToDisplay: {},
       selectedFlag: {}
     }
+    this.handleOnOffButton = this.handleOnOffButton.bind(this);
     this.handleFlagSelect = this.handleFlagSelect.bind(this);
     this.handleChangeFlagButton = this.handleChangeFlagButton.bind(this);
     console.log(this.state);
@@ -21,10 +23,26 @@ componentDidMount(){
   fetch(url).then(res => res.json()).then(flags => {
     this.setState({
        flags: flags,
-       
+       selectedFlag: flags[0]
      })
    });
 }
+
+  handleOnOffButton(event){
+
+    event.preventDefault()
+    if (this.state.selectedFlag === this.state.flags[0]){
+      this.setState({
+        onoff: true,
+        selectedFlag: this.state.flags[1]
+      })
+    } else
+      this.setState({
+        onoff: false,
+        selectedFlag: this.state.flags[0]
+      })
+  };
+
 
  handleFlagSelect(event){
 
@@ -42,12 +60,15 @@ componentDidMount(){
  handleChangeFlagButton(event){
 
   event.preventDefault()
-  console.log("selectedflag",this.state.selectedFlag);
+  if (this.state.onoff === true){
+  const onarry = this.state.flags.filter(flag => flag.name !== "Off")
+  console.log("on", onarry);
   const index = this.state.selectedFlag.id;
-  const indexnew = index + 1;
-  const selected = this.state.flags[indexnew];
-  this.setState({selectedFlag: selected})
-  console.log("selectedflagafterchange", this.state.selectedFlag);
+
+  const indexnew = (index + 1) % onarry.length;
+  const selected = onarry[indexnew];
+    this.setState({selectedFlag: selected});
+  }
 }
 
 
@@ -71,7 +92,7 @@ componentDidMount(){
       <select name="flagsDropDown" onChange={this.handleFlagSelect}>
       {options}
       </select>
-      <button type="button"> On/Off </button>
+      <button type="button" onClick={this.handleOnOffButton}> On/Off </button>
       <button type="button" onClick={this.handleChangeFlagButton} > change flag </button>
       <Device flag={this.state.selectedFlag}/>
       {elements}
