@@ -60,14 +60,14 @@ componentDidMount(){
  handleChangeFlagButton(event){
 
   event.preventDefault()
-  console.log("selectedflag",this.state.selectedFlag);
+  if (this.state.onoff === true){
+  const onarry = this.state.flags.filter(flag => flag.name !== "Off")
+  console.log("on", onarry);
   const index = this.state.selectedFlag.id;
-  const indexnew = (index + 1) % this.state.flags.length;
-  const selected = this.state.flags[indexnew];
-  this.setState({selectedFlag: selected})
-  console.log("selectedflagafterchange",this.state.selectedFlag);
-
-
+  const indexnew = (index + 1) % onarry.length;
+  const selected = onarry[indexnew];
+    this.setState({selectedFlag: selected});
+  }
 }
 
 
