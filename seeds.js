@@ -2,10 +2,7 @@ use flagsdb;
 
 db.flags.remove({});
 
-db.flags.insert([
-
-
-{
+db.flags.insert([{
   "id": 1,
   "name": "Scotland",
   "flagLEDs":[
@@ -138,9 +135,10 @@ db.flags.insert([
     {"position": [0, 5], "colour": "white", "status": "off"},
     {"position": [0, 6], "colour": "white", "status": "off"},
     {"position": [0, 7], "colour": "white", "status": "off"},
-    {"position": [0, 8], "colour": "red", "status": "off"},
+    {"position": [0, 8], "colour": "white", "status": "off"},
     {"position": [0, 9], "colour": "red", "status": "off"},
     {"position": [0, 10], "colour": "red", "status": "off"},
+    {"position": [0, 11], "colour": "red", "status": "off"},
     {"position": [0, 11], "colour": "red", "status": "off"},
     // row 2
     {"position": [1, 0], "colour": "green", "status": "off"},
@@ -151,7 +149,7 @@ db.flags.insert([
     {"position": [1, 5], "colour": "white", "status": "off"},
     {"position": [1, 6], "colour": "white", "status": "off"},
     {"position": [1, 7], "colour": "white", "status": "off"},
-    {"position": [1, 8], "colour": "red", "status": "off"},
+    {"position": [1, 8], "colour": "white", "status": "off"},
     {"position": [1, 9], "colour": "red", "status": "off"},
     {"position": [1, 10], "colour": "red", "status": "off"},
     {"position": [1, 11], "colour": "red", "status": "off"},
@@ -360,10 +358,4 @@ db.flags.insert([
     {"position": [7, 11], "colour": "red", "status": "off"},
     {"position": [7, 11], "colour": "red", "status": "off"}
   ]
-}
-
-
-
-
-]
-)
+}]);
