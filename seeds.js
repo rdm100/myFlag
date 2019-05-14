@@ -2,6 +2,7 @@ use flagsdb;
 
 db.flags.remove({});
 
+
 db.flags.insert([
 
   {
@@ -256,10 +257,11 @@ db.flags.insert([
     {"position": [0, 5], "colour": "white", "status": "off"},
     {"position": [0, 6], "colour": "white", "status": "off"},
     {"position": [0, 7], "colour": "white", "status": "off"},
-    {"position": [0, 8], "colour": "red", "status": "off"},
+    {"position": [0, 8], "colour": "white", "status": "off"},
     {"position": [0, 9], "colour": "red", "status": "off"},
     {"position": [0, 10], "colour": "red", "status": "off"},
     {"position": [0, 11], "colour": "red", "status": "off"},
+    {"position": [0, 12], "colour": "red", "status": "off"},
     // row 2
     {"position": [1, 0], "colour": "green", "status": "off"},
     {"position": [1, 1], "colour": "green", "status": "off"},
@@ -269,7 +271,7 @@ db.flags.insert([
     {"position": [1, 5], "colour": "white", "status": "off"},
     {"position": [1, 6], "colour": "white", "status": "off"},
     {"position": [1, 7], "colour": "white", "status": "off"},
-    {"position": [1, 8], "colour": "red", "status": "off"},
+    {"position": [1, 8], "colour": "white", "status": "off"},
     {"position": [1, 9], "colour": "red", "status": "off"},
     {"position": [1, 10], "colour": "red", "status": "off"},
     {"position": [1, 11], "colour": "red", "status": "off"},
@@ -392,7 +394,7 @@ db.flags.insert([
     {"position": [1, 9], "colour": "white", "status": "off"},
     {"position": [1, 10], "colour": "white", "status": "off"},
     {"position": [1, 11], "colour": "white", "status": "off"},
-    {"position": [1, 11], "colour": "white", "status": "off"},
+    {"position": [1, 12], "colour": "white", "status": "off"},
     // row 3
     {"position": [2, 0], "colour": "blue", "status": "off"},
     {"position": [2, 1], "colour": "blue", "status": "off"},
@@ -406,7 +408,7 @@ db.flags.insert([
     {"position": [2, 9], "colour": "white", "status": "off"},
     {"position": [2, 10], "colour": "white", "status": "off"},
     {"position": [2, 11], "colour": "white", "status": "off"},
-    {"position": [2, 11], "colour": "white", "status": "off"},
+    {"position": [2, 12], "colour": "white", "status": "off"},
     // row 4
     {"position": [3, 0], "colour": "blue", "status": "off"},
     {"position": [3, 1], "colour": "blue", "status": "off"},
@@ -420,7 +422,7 @@ db.flags.insert([
     {"position": [3, 9], "colour": "white", "status": "off"},
     {"position": [3, 10], "colour": "white", "status": "off"},
     {"position": [3, 11], "colour": "white", "status": "off"},
-    {"position": [3, 11], "colour": "white", "status": "off"},
+    {"position": [3, 12], "colour": "white", "status": "off"},
     // row 5
     {"position": [4, 0], "colour": "blue", "status": "off"},
     {"position": [4, 1], "colour": "blue", "status": "off"},
@@ -434,7 +436,7 @@ db.flags.insert([
     {"position": [4, 9], "colour": "red", "status": "off"},
     {"position": [4, 10], "colour": "red", "status": "off"},
     {"position": [4, 11], "colour": "red", "status": "off"},
-    {"position": [4, 11], "colour": "red", "status": "off"},
+    {"position": [4, 12], "colour": "red", "status": "off"},
     // row 6
     {"position": [5, 0], "colour": "blue", "status": "off"},
     {"position": [5, 1], "colour": "blue", "status": "off"},
@@ -448,7 +450,7 @@ db.flags.insert([
     {"position": [5, 9], "colour": "red", "status": "off"},
     {"position": [5, 10], "colour": "red", "status": "off"},
     {"position": [5, 11], "colour": "red", "status": "off"},
-    {"position": [5, 11], "colour": "red", "status": "off"},
+    {"position": [5, 12], "colour": "red", "status": "off"},
     // row 7
     {"position": [6, 0], "colour": "blue", "status": "off"},
     {"position": [6, 1], "colour": "blue", "status": "off"},
@@ -462,7 +464,7 @@ db.flags.insert([
     {"position": [6, 9], "colour": "red", "status": "off"},
     {"position": [6, 10], "colour": "red", "status": "off"},
     {"position": [6, 11], "colour": "red", "status": "off"},
-    {"position": [6, 11], "colour": "red", "status": "off"},
+    {"position": [6, 12], "colour": "red", "status": "off"},
     // row 8
     {"position": [7, 0], "colour": "blue", "status": "off"},
     {"position": [7, 1], "colour": "red", "status": "off"},
@@ -476,8 +478,9 @@ db.flags.insert([
     {"position": [7, 9], "colour": "red", "status": "off"},
     {"position": [7, 10], "colour": "red", "status": "off"},
     {"position": [7, 11], "colour": "red", "status": "off"},
-    {"position": [7, 11], "colour": "red", "status": "off"}
+    {"position": [7, 12], "colour": "red", "status": "off"}
   ]
+
 }
 
 ]

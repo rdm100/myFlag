@@ -64,6 +64,7 @@ componentDidMount(){
   const onarry = this.state.flags.filter(flag => flag.name !== "Off")
   console.log("on", onarry);
   const index = this.state.selectedFlag.id;
+
   const indexnew = (index + 1) % onarry.length;
   const selected = onarry[indexnew];
     this.setState({selectedFlag: selected});
@@ -102,5 +103,7 @@ componentDidMount(){
   }
 
 }
+
+
 
 export default MainBox;

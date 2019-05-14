@@ -29,27 +29,34 @@ class Device extends React.Component{
 
     const led_el = this.props.flag.flagLEDs.map((led) => {
       return(
-        <li key={led.position} className="component-item" style={{backgroundColor: led.colour}}>
+        <li key={led.position} className="leds" style={{backgroundColor: led.colour, boxShadow: `0px 0px 10px 3px ${led.colour}`}}>
         </li>
       )
     })
 
 
     return (
-      <div>
-
-      <div>
-      <p>{this.props.flag.id}</p>
-      <p>{this.props.flag.name}</p>
-      <p>{this.props.flag.colour}</p>
-      </div>
-
-
       <div className="LEDsGrid">
+
+      <div id="base" className="base">
+
+      <div id="matrix" className="matrix">
       <ul className="LEDs">
       {led_el}
       </ul>
       </div>
+
+      <div>
+      <button >Get coordinates</button>
+      <button >Left</button>
+      <button >Right</button>
+      <button >Stop</button>
+      <button >Clear</button>
+      <button >fill</button>
+      </div>
+
+      </div>
+
       </div>
 
 
