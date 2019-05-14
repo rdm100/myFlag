@@ -20,7 +20,8 @@ componentDidMount(){
   const url = '/api/flags';
   fetch(url).then(res => res.json()).then(flags => {
     this.setState({
-       flags: flags
+       flags: flags,
+       
      })
    });
 }

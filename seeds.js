@@ -19,7 +19,15 @@ db.flags.insert([
       {"position": [0, 1], "colour": "red", "status": "off"},
       {"position": [0, 2], "colour": "red", "status": "off"}
     ]
+  },
+  {
+    "id": ,
+    "name": "off",
+    "flagLEDs":[
+      {"position": [0, 1], "colour": "grey", "status": "off"},
+      {"position": [0, 2], "colour": "grey", "status": "off"}
+    ]
   }
-  
+
 ]
 )
