@@ -15,17 +15,17 @@ MVP:
 * Implement functionality of device buttons (changes flag)
 
 Extension:
-• Implement switch-flag-every-second mode
-• Implement animation modes that the device supports: blinking, scrolling
-• Implement scrolling text
-• Implement animations
-• Any other features agreed with the client
+* Implement switch-flag-every-second mode
+* Implement animation modes that the device supports: blinking, scrolling
+* Implement scrolling text
+* Implement animations
+* Any other features agreed with the client
 
 Further extension:
-• If main features are ready, start working on interface for customising flags that are
+* If main features are ready, start working on interface for customising flags that are
 displayed:
-• drag and drop the flags to use
-• Add and customise text do display: words, colour and background, animation, etc
+* drag and drop the flags to use
+* Add and customise text do display: words, colour and background, animation, etc
 
 # Project Title
 
