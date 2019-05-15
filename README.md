@@ -10,9 +10,9 @@ My Flag are looking to improve their website with an interactive react app that 
 https://myflag.store/
 
 MVP:
-• Implement in React a display resembling the My Flag device
-• Implement display of a single flag onto the device
-• Implement functionality of device buttons (changes flag)
+* Implement in React a display resembling the My Flag device
+* Implement display of a single flag onto the device
+* Implement functionality of device buttons (changes flag)
 
 Extension:
 • Implement switch-flag-every-second mode
