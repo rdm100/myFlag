@@ -14,7 +14,7 @@ class MainBox extends React.Component{
     this.handleOnOffButton = this.handleOnOffButton.bind(this);
     this.handleFlagSelect = this.handleFlagSelect.bind(this);
     this.handleChangeFlagButton = this.handleChangeFlagButton.bind(this);
-    console.log(this.state);
+
 
   }
 
@@ -52,7 +52,6 @@ componentDidMount(){
   const index = event.target.value;
   const selected = this.state.flags[index];
   this.setState({selectedFlag: selected})
-  console.log(this.state);
 
 
 }
@@ -62,7 +61,6 @@ componentDidMount(){
   event.preventDefault()
   if (this.state.onoff === true){
   const onarry = this.state.flags.filter(flag => flag.name !== "Off")
-  console.log("on", onarry);
   const index = this.state.selectedFlag.id;
 
   const indexnew = (index + 1) % onarry.length;
