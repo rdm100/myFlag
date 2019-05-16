@@ -9,12 +9,13 @@ class MainBox extends React.Component{
       onoff: false,
       flags:[],
       flagToDisplay: {},
-      selectedFlag: {}
+      selectedFlag: {},
+      timeChange: false
     }
     this.handleOnOffButton = this.handleOnOffButton.bind(this);
     this.handleFlagSelect = this.handleFlagSelect.bind(this);
     this.handleChangeFlagButton = this.handleChangeFlagButton.bind(this);
-
+    this.handleTimeChange = this.handleTimeChange.bind(this);
   }
 
 componentDidMount(){
@@ -42,6 +43,18 @@ componentDidMount(){
       })
   };
 
+  handleTimeChange(event){
+    console.log(this.state);
+    event.preventDefault()
+    if(this.state.timeChange === false){
+      this.setState({timeChange: true});
+      console.log(this.state);
+      setInterval(() => this.setState({timeChange:  this.handleChangeFlagButton()}), 1000);
+    } else if(this.state.timeChange === true){
+      this.setState({timeChange: false});
+      this.setState({selectedFlag: this.state.flags[0]});
+    }
+  }
 
  handleFlagSelect(event){
 
@@ -57,7 +70,7 @@ componentDidMount(){
 
  handleChangeFlagButton(event){
 
-  event.preventDefault()
+  // event.preventDefault()
   if (this.state.onoff === true){
   const onarry = this.state.flags.filter(flag => flag.name !== "Off")
   const index = this.state.selectedFlag.id;
