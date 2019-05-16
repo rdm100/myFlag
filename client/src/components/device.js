@@ -29,14 +29,13 @@ class Device extends React.Component{
 
     const led_el = this.props.flag.flagLEDs.map((led) => {
       return(
-        <li key={led.position} className="leds" style={{backgroundColor: led.colour, boxShadow: `0px 0px 10px 3px ${led.colour}`}}>
+        <li key={led.position} className="leds" style={{backgroundColor: led.colour, boxShadow: `0px 0px 10px 4px ${led.colour}`}}>
         </li>
       )
     })
 
 
     return (
-      <div className="LEDsGrid">
 
       <div id="base" className="base">
 
@@ -47,17 +46,10 @@ class Device extends React.Component{
       </div>
 
       <div>
-      <button >Get coordinates</button>
-      <button >Left</button>
-      <button >Right</button>
-      <button >Stop</button>
-      <button >Clear</button>
-      <button >fill</button>
       </div>
 
       </div>
 
-      </div>
 
 
     )
