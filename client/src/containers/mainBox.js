@@ -15,7 +15,6 @@ class MainBox extends React.Component{
     this.handleFlagSelect = this.handleFlagSelect.bind(this);
     this.handleChangeFlagButton = this.handleChangeFlagButton.bind(this);
 
-
   }
 
 componentDidMount(){
@@ -92,6 +91,7 @@ componentDidMount(){
       </select>
       <button type="button" onClick={this.handleOnOffButton}> On/Off </button>
       <button type="button" onClick={this.handleChangeFlagButton} > change flag </button>
+      <button type="button" onClick={this.handleTimeChange}> Start/Stop slide show </button>
       <Device flag={this.state.selectedFlag}/>
       {elements}
 
