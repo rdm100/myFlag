@@ -1,0 +1,101 @@
+p{
+  color: black;
+}
+
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 1px;
+  max-width: 5px;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+ul.LEDs {
+  margin: 10px;
+  text-align: center;
+}
+
+
+@media all and (max-width: 800px) {
+  ul {
+    grid-gap: .25em;
+  }
+
+}
+
+body {
+  background-color: #fff;
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.base {
+  align-self: center;
+  display: inline-block;
+  border: 10px groove gray;
+  border-right: 10px ridge gray;
+  border-bottom: 10px ridge gray;
+  padding: 10px;
+  background-color: #BBBBBB;
+  position: absolute;
+  text-align: center;
+  margin: 50px auto;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+top: 50%;
+left: 50%;
+margin: -150px 0 0 -230px;
+align-self: center;
+border-radius: 0.75em;
+}
+
+.matrix {
+  width: 420px;
+  height: 270px;
+  background-color: black;
+  border: 5px ridge gray;
+  border-bottom: 5px groove gray;
+  border-left: 5px groove gray;
+  border-radius: 0.75em;
+
+}
+
+.leds {
+  cursor:pointer;
+  display: inline-block;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.75em;
+
+}
+
+.off{
+  background-color: #222222;
+   -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, .75);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, .75);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, .75);
+}
+
+.MainBox {
+  align-self: center;
+
+
+}

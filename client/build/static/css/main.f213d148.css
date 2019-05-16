@@ -1,0 +1,2 @@
+body{margin:0;padding:0;background-color:ivory}p{color:#000}ul{display:grid;grid-template-columns:repeat(7,1fr);grid-gap:1em;margin:0 auto;max-width:64em;padding:0}li{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;list-style:none;margin-left:0;font-size:calc(16px + 5 * ((100vw - 300px) / 1300))}ul.LEDs li{border:1px solid #eaeaea;height:12vw;max-height:125px}@media (max-width:800px){ul{grid-gap:.25em}}
+/*# sourceMappingURL=main.f213d148.css.map*/
